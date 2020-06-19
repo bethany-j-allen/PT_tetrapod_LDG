@@ -1,0 +1,33 @@
+Reconstructing occurrences using GPlates:
+
+1. Download GPlates (https://www.gplates.org)
+
+2. Download PaleoMap Data: https://www.earthbyte.org/paleomap-paleoatlas-for-gplates/
+
+3. Open Gplates and go to File -> Manage Feature Collections -> on bottom left click 'Open file'.
+
+4. Using this interface, load in your occurrences (just say OK if any window pops up), which should be in the format of a shape file.
+
+5. In the same interface, open the data from PaleoMaps (your plate boundaries and rotation of plates), which will be in the format .rot and .gpml (it is in the folder Paleomap Global Plate Model).
+
+6. You now want to associate these data (your occurrences in the format of a shape file, and your plate boundaries). To do this, go to Features -> Assign Plate IDs.
+
+7. In this interface, it asks you to 'Specify one or more partitioning layers' - this is your PlatePolygon model from PaleoMaps. Click the tick box to select and then say 'next.
+
+8. In the next interface, it asks to 'Specify features to be partitioned'. This is your occurrence shapefile data.
+
+9. Click next, and then hit 'apply'
+
+10. Go to Reconstruction -> Export
+
+11. Select 'Export to a single snapshot instant'. Specify your time period in Ma. Then, go to the 'Add Export' tab on the bottom left.
+
+12. In this, select 'reconstructed geometries' in #1 and 'shapefile' in #2. Say OK.
+
+13. Then, you are ready to export (specify folder name and position, if you want) and click 'export snapshot'
+
+To make a shapefile and get rotated paleocoordinates from shapefiles:
+
+1. To convert your csv file to a shapefile for use in Gplates, see the attached code in R.
+
+2. To obtain the rotated lat/longs from the Gplates shapefile, see attached code in R.
